@@ -1,43 +1,44 @@
-# Website
+# Nama Project Anda
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Dokumentasi ini berisi panduan untuk menyiapkan dan menjalankan project secara lokal.
 
-## Installation
+## ⚙️ Cara Menjalankan Project
 
-```bash
-npm install
-```
+### 1. Clone Repository
+Pastikan Anda sudah melakukan clone repository ini ke komputer lokal:
+\`\`\`bash
+git clone <url-repository-anda>
+cd <nama-folder-project>
+\`\`\`
 
-**Note**: feel free to use the package manager of your choice.
+### 2. Setup Backend
+1. Masuk ke direktori backend:
+   \`\`\`bash
+   cd backend
+   \`\`\`
+2. Salin file environment dan sesuaikan isinya:
+   \`\`\`bash
+   cp .env.example .env
+   \`\`\`
+3. Install dependencies dan jalankan server backend:
+   \`\`\`bash
+   npm install
+   npm run dev  # atau npm start / nodemon index.js
+   \`\`\`
+   *(Backend akan berjalan di port yang ditentukan, contoh: `http://localhost:4000`)*[cite: 8, 9]
 
-## Local Development
-
-```bash
-npm run start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
-npm run build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true npm run deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> npm run deploy
-```
-
-If you are using GitHub Pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+### 3. Setup Frontend
+1. Buka terminal baru, lalu masuk ke direktori frontend:
+   \`\`\`bash
+   cd ../frontend
+   \`\`\`
+2. Salin file environment jika ada:
+   \`\`\`bash
+   cp .env.example .env
+   \`\`\`
+3. Install dependencies dan jalankan server development frontend:
+   \`\`\`bash
+   npm install
+   npm run dev  # atau npm run start
+   \`\`\`
+   *(Frontend biasanya berjalan di `http://localhost:5173` atau `http://localhost:3000`)*[cite: 9]
